@@ -1,14 +1,24 @@
 $(function(){
-    $('#big').click(function(){
+    $('#big').click(function(){   
     $('#main_modal').show();
+    $('#content').html('<div>大</div>');
+    $('#input_big').show();
   });
   $('#close').click(function(){
     $('#main_modal').hide();
+    $('#input_big').hide();
   });
 
 
   $('.small').click(function(){
-    $('#input_small').show();
+    $('#main_modal').show();
+    $('#content').html('<div>小</div>');
+    $('#input_small').show(); 
+    });
+  $('#close').click(function(){
+    $('#main_modal').hide();
+    $('#input_small').hide();
+    
   });
   $('#double_1').click(function(){
     $('#input_double_1').show();
@@ -76,7 +86,7 @@ $('#sum_11').click(function(){
 $('#sum_12').click(function(){
     $('#input_sum_12').show();
   });
-
+    
 $('#sum_13').click(function(){
     $('#input_sum_13').show();
   });
