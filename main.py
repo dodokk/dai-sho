@@ -259,54 +259,47 @@ def bet_page(id, count):
         dice = makedice()
         sai = Dice(one=dice[0], two=dice[1], three=dice[2])
         session.add(sai)
+        totalwin = 0
+        result = []
+        for other in others:
+            parsonalwin = 0
+            miniresult=[]
+            bets = session.query(BetTable).filter(BetTable.name == other.name).all()
+            for bet in bets:
+                your_ex = [bet.position, bet.value, bet.bet]
+                win = judge_game(sai, your_ex)
+                miniresult.append(win)
+                parsonalwin += win
+            result.append(miniresult)
+            totalwin += parsonalwin
+            other.money += parsonalwin
+        dealer.money -= totalwin
+        session.query(BetTable).delete()
+        session.query(Dice).delete()
         session.commit()
-        return render_template("dice.html", dice=dice, id=id, count=count)
+
+        if id == 5 and count == 2:
+            return render_template("result.html", dealer=dealer, others=others)
+        elif count == 2:
+            return render_template("dice.html", dealer=dealer, others=others, id=id+1, count=1, result=result)
+        else:
+            return render_template("dice.html", dealer=dealer, others=others, id=id, count=count+1, result=result)
 
 
-'''
-        dealer = session.query(User).filter(User.id == id+1).first()
-        others = session.query(User).filter(User.id != id+1).all()
-        return render_template("bet.html", dealer=dealer, others=others, id=id+1)
-
-    dealer = session.query(User).filter(User.id == 2).first()
-    others = session.query(User).filter(User.id != 2).all()
-    return render_template("bet.html", dealer=dealer, others=others, id=2)
-'''
-
-@app.route("/result/<int:id>/<int:count>", methods=["GET","POST"])
-def result_page(id, count):
+@app.route("/again/<int:id>/<int:count>", methods=["GET","POST"])
+def again_page(id, count):
     dealer = session.query(User).filter(User.id == id).first()
     others = session.query(User).filter(User.id != id).all()
-    dice = session.query(Dice).first()
-    sai = [dice.one, dice.two, dice.three]
-    totalwin = 0
-    for other in others:
-        parsonalwin = 0
-        bets = session.query(BetTable).filter(BetTable.name == other.name).all()
-        for bet in bets:
-            your_ex = [bet.position, bet.value, bet.bet]
-            win = judge_game(sai, your_ex)
-            parsonalwin += win
-        totalwin += parsonalwin
-        other.money += parsonalwin
-    dealer.money -= totalwin
-    session.commit()
+    return render_template("bet.html", dealer=dealer, others=others, id=id, count=count)
 
-    if id == 5 and count == 3:
-        return render_template("result.html", )
-    elif count == 3:
-        return render_template("bet.html", dealer=dealer, others=others, id=id+1, count=1)
-    else:
-        return render_template("bet.html", dealer=dealer, others=others, id=id, count=count+1)
-
-@app.route("/again", methods=["GET", "POST"])
-def again():
+@app.route("/nextgame", methods=["GET", "POST"])
+def next_game():
     session.query(BetTable).delete()
     session.query(Dice).delete()
     session.commit()
     dealer = session.query(User).filter(User.id == 1).first()
     others = session.query(User).filter(User.id != 1).all()
-    return render_template("bet.html", dealer=dealer.name, others=others, id=1)
+    return render_template("bet.html", dealer=dealer, others=others, id=1)
 
 @app.route("/end", methods=["GET", "POST"])
 def end():
