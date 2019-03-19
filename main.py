@@ -259,6 +259,8 @@ def bet_page(id, count):
         dice = makedice()
         sai = Dice(one=dice[0], two=dice[1], three=dice[2])
         session.add(sai)
+        session.commit()
+
         totalwin = 0
         result = []
         for other in others:
@@ -267,7 +269,7 @@ def bet_page(id, count):
             bets = session.query(BetTable).filter(BetTable.name == other.name).all()
             for bet in bets:
                 your_ex = [bet.position, bet.value, bet.bet]
-                win = judge_game(sai, your_ex)
+                win = judge_game(dice, your_ex)
                 miniresult.append(win)
                 parsonalwin += win
             result.append(miniresult)
@@ -281,9 +283,9 @@ def bet_page(id, count):
         if id == 5 and count == 2:
             return render_template("result.html", dealer=dealer, others=others)
         elif count == 2:
-            return render_template("dice.html", dealer=dealer, others=others, id=id+1, count=1, result=result)
+            return render_template("dice.html", dice=dice, dealer=dealer, others=others, id=id+1, count=1, result=result)
         else:
-            return render_template("dice.html", dealer=dealer, others=others, id=id, count=count+1, result=result)
+            return render_template("dice.html", dice=dice, dealer=dealer, others=others, id=id, count=count+1, result=result)
 
 
 @app.route("/again/<int:id>/<int:count>", methods=["GET","POST"])
