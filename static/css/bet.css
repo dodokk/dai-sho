@@ -1,0 +1,396 @@
+body{
+    height: 100vh;
+    background-color: rgb(43, 43, 43);
+     font-family: 'ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+}
+
+
+.player{
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 40px;
+    color: white;
+}
+
+.roof{
+    width: 1168px;
+    margin: 0 auto;
+}
+.big{
+    height: 122px;
+    width: 122px;
+    background-color: white;
+    margin-right: 1px;
+    font-size:100px;
+    text-align: center;
+    line-height: 122px;
+    position: relative;
+
+}
+.big:hover{
+     transition-duration: 0.3s;
+    opacity: 0.7;
+}
+.small:hover{
+     transition-duration: 0.3s;
+    opacity: 0.7;
+}
+.number_cell:hover{
+     transition-duration: 0.3s;
+    opacity: 0.7;
+}
+
+img:hover{
+    transition-duration: 0.3s;
+    opacity: 0.7;
+}
+#input_big{
+    display: none;
+    position: absolute;
+    top: -80px;
+    right:5px;
+}
+
+#input_small{
+    display: none;
+    position: absolute;
+    top: -80px;
+    right:5px;
+}
+.box1{
+   float: left;
+}
+.double_cell{
+    height: 122px;
+    width: 70px;
+    float: left;
+    margin-right: 1px;
+    position: relative;
+}
+.double_1{
+    position: relative;
+}
+#input_double_1{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+#input_double_2{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+#input_double_3{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+#input_double_4{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+#input_double_5{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+#input_double_6{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+.triple_cell{
+    height: 40px;
+    width: 141px;
+    margin-bottom: 1px;
+    position: relative;
+}
+
+#input_triple_1{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+#input_triple_2{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+#input_triple_3{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+#input_triple_4{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+#input_triple_5{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+#input_triple_6{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+.triple_3 .triple_6{
+    margin-bottom: 0px;
+}
+.anytriple_cell{
+    height: 122px;
+    width: 212px;
+    margin: 0px 1px;
+    position: relative;
+}
+#input_anytriple{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left:5px;
+}
+.middle{
+    width: 1064px;
+    margin: 0 auto;
+}
+
+.double_4{
+    margin-left: 1px;
+}
+.double_6{
+    margin-right: 0px;
+}
+
+.small{
+    height: 122px;
+    width: 122px;
+    background-color: white;
+    margin-left: 1px;
+       font-size:100px;
+     text-align: center;
+    line-height: 122px;
+    position: relative;
+
+}
+.box2{
+    float: left;
+}
+.number_cell{
+    height: 70px;
+    width: 70px;
+    float: left;
+    text-align: center;
+    line-height: 70px;
+    font-size: 40px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    background-color: white;
+}
+
+
+#sum_4{
+    position: relative;
+}
+#sum_5{
+    position: relative;
+}
+#sum_6{
+    position: relative;
+}
+#sum_7{
+    position: relative;
+}
+#sum_8{
+    position: relative;
+}
+#sum_9{
+    position: relative;
+}
+#sum_10{
+    position: relative;
+}
+#sum_11{
+    position: relative;
+}
+#sum_12{
+    position: relative;
+}
+#sum_13{
+    position: relative;
+}
+#sum_14{
+    position: relative;
+}
+#sum_15{
+    position: relative;
+}
+#sum_16{
+    position: relative;
+}
+#sum_17{
+    position: relative;
+}
+#input_sum_4{
+    display: none;
+    position: absolute;
+   top:-33px;
+    left:5px;
+}
+#input_sum_5{
+    display: none;
+    position: absolute;
+    top:-33px;
+    left:5px;
+}#input_sum_6{
+    display: none;
+    position: absolute;
+    top:-33px;
+    left:5px;
+}
+#input_sum_7{
+    display: none;
+    position: absolute;
+    top:-33px;
+    left:5px;
+}
+#input_sum_8{
+    display: none;
+    position: absolute;
+    top:-33px;
+    left:5px;
+}
+#input_sum_9{
+    display: none;
+    position: absolute;
+    top:-33px;
+    left:5px;
+}#input_sum_10{
+    display: none;
+    position: absolute;
+   top:-33px;
+    left:5px;
+}
+#input_sum_11{
+    display: none;
+    position: absolute;
+    top:-33px;
+    left:5px;
+}
+#input_sum_12{
+    display: none;
+    position: absolute;
+    top:-33px;
+    left:5px;
+}
+#input_sum_13{
+    display: none;
+    position: absolute;
+    top:-33px;
+    left:5px;
+}#input_sum_14{
+    display: none;
+    position: absolute;
+    top:-33px;
+    left:5px;
+}
+#input_sum_15{
+    display: none;
+    position: absolute;
+    top:-33px;
+    left:5px;
+}
+#input_sum_16{
+    display: none;
+    position: absolute;
+    top:-33px;
+    left:5px;
+}
+#input_sum_17{
+    display: none;
+    position: absolute;
+    top:-33px;
+    left:5px;
+}
+.number4{
+    margin-left: 0px;
+}
+.box3{
+    float: left;
+}
+.conbi_cell{
+    height: 130px;
+    width: 70px;
+    float: left;
+    margin-left: 1px;
+}
+.conbi_1{
+    margin-left: 0px;
+}
+
+.box4{
+    float: left;
+}
+
+.in_cell{
+    height: 176.5px;
+    width: 176.5px;
+    float: left;
+    background-color: white;
+    margin-left: 1px;
+    margin-top: 1px;
+}
+
+.in_1{
+    margin-left: 0px;
+}
+input{
+    float:inherit;
+}
+#main_modal{
+    height:100%;
+    width:100%;
+    position: absolute;
+    left: 0px;
+    background-color: rgba(0,0,0,0.7);
+    top:0;
+    display: none;
+    z-index: 1;
+}
+#modal {
+  position: absolute;
+  top: 10%;
+  left: 32.5%;
+  background-color: #e6ecf0;
+  border-radius: 10px;
+  width: 450px;
+  height: 500px;;
+  text-align: center;
+  z-index: 2;
+}
+#close{
+    position: absolute;
+    top:0;
+    right: 19px;
+    font-size:40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    margin: 0;
+}

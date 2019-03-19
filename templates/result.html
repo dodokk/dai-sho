@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {{ users[0].name }}:{{ result[0] }}
+    {{ users[1].name }}:{{ result[1] }}
+    {{ users[2].name }}:{{ result[2] }}
+    {{ users[3].name }}:{{ result[3] }}
+    {{ users[4].name }}:{{ result[4] }}
+
+    <form action="/end" method="post">
+      <button type="submit">おわる</button>
+    </form>
+
+    <form action="/again" method="post">
+      <button type="submit">おかわり</button>
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,95 @@
+$(function(){
+    $('#big').click(function(){
+    $('#main_modal').show();
+  });
+  $('#close').click(function(){
+    $('#main_modal').hide();
+  });
+
+
+  $('.small').click(function(){
+    $('#input_small').show();
+  });
+  $('#double_1').click(function(){
+    $('#input_double_1').show();
+  });
+ $('#double_2').click(function(){
+    $('#input_double_2').show();
+  });
+ $('#double_3').click(function(){
+    $('#input_double_3').show();
+  });
+$('#double_4').click(function(){
+    $('#input_double_4').show();
+  });
+ $('#double_5').click(function(){
+    $('#input_double_5').show();
+  });
+ $('#double_6').click(function(){
+    $('#input_double_6').show();
+  });
+ $('#triple_1').click(function(){
+    $('#input_triple_1').show();
+  });
+ $('#triple_2').click(function(){
+    $('#input_triple_2').show();
+  });
+$('#triple_3').click(function(){
+    $('#input_triple_3').show();
+  });
+$('#triple_4').click(function(){
+    $('#input_triple_4').show();
+  });
+$('#triple_5').click(function(){
+    $('#input_triple_5').show();
+  });
+$('#triple_6').click(function(){
+    $('#input_triple_6').show();
+  });
+$('#anytriple').click(function(){
+    $('#input_anytriple').show();
+  });
+$('#sum_4').click(function(){
+    $('#input_sum_4').show();
+  });
+$('#sum_5').click(function(){
+    $('#input_sum_5').show();
+  });
+$('#sum_6').click(function(){
+    $('#input_sum_6').show();
+  });
+$('#sum_7').click(function(){
+    $('#input_sum_7').show();
+  });
+$('#sum_8').click(function(){
+    $('#input_sum_8').show();
+  });
+$('#sum_9').click(function(){
+    $('#input_sum_9').show();
+  });
+$('#sum_10').click(function(){
+    $('#input_sum_10').show();
+  });
+$('#sum_11').click(function(){
+    $('#input_sum_11').show();
+  });
+$('#sum_12').click(function(){
+    $('#input_sum_12').show();
+  });
+
+$('#sum_13').click(function(){
+    $('#input_sum_13').show();
+  });
+$('#sum_14').click(function(){
+    $('#input_sum_14').show();
+  });
+$('#sum_15').click(function(){
+    $('#input_sum_15').show();
+  });
+    $('#sum_16').click(function(){
+    $('#input_sum_16').show();
+  });
+$('#sum_17').click(function(){
+    $('#input_sum_17').show();
+  });
+});
