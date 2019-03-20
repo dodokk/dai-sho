@@ -68,11 +68,12 @@ def main_page():
         user4 = User(name = request.form["name4"], money = 0)
         user5 = User(name = request.form["name5"], money = 0)
 
-        session.add(user1)
-        session.add(user2)
-        session.add(user3)
-        session.add(user4)
-        session.add(user5)
+        if user1.name == "" or user2.name == "":
+            return render_template("top.html")
+
+        for user in [user1, user2, user3, user4, user5]:
+            if user.name != "":
+                session.add(user)
 
         session.commit()
 
@@ -280,17 +281,12 @@ def bet_page(id, count):
         session.query(Dice).delete()
         session.commit()
 
-        if id == 5 and count == 2:
-            player = session.query(User).all()
-            return render_template("result.html", player=player)
+        if id == id_max and count == 2:
+            return render_template("result.html", dealer=dealer, others=others)
         elif count == 2:
             return render_template("dice.html", dice=dice, dealer=dealer, others=others, id=id+1, count=1, result=result)
         else:
             return render_template("dice.html", dice=dice, dealer=dealer, others=others, id=id, count=count+1, result=result)
-
-    dealer = session.query(User).filter(User.id == 1).first()
-    others = session.query(User).filter(User.id != 1).all()
-    return render_template("bet.html", dealer=dealer, others=others, id=1, count=1)
 
 
 @app.route("/again/<int:id>/<int:count>", methods=["GET","POST"])
@@ -306,7 +302,7 @@ def next_game():
     session.commit()
     dealer = session.query(User).filter(User.id == 1).first()
     others = session.query(User).filter(User.id != 1).all()
-    return render_template("bet.html", dealer=dealer, others=others, id=1, count=1)
+    return render_template("bet.html", dealer=dealer, others=others, id=1)
 
 @app.route("/end", methods=["GET", "POST"])
 def end():
