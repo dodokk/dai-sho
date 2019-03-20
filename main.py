@@ -281,11 +281,16 @@ def bet_page(id, count):
         session.commit()
 
         if id == 5 and count == 2:
-            return render_template("result.html", dealer=dealer, others=others)
+            player = session.query(User).all()
+            return render_template("result.html", player=player)
         elif count == 2:
             return render_template("dice.html", dice=dice, dealer=dealer, others=others, id=id+1, count=1, result=result)
         else:
             return render_template("dice.html", dice=dice, dealer=dealer, others=others, id=id, count=count+1, result=result)
+
+    dealer = session.query(User).filter(User.id == 1).first()
+    others = session.query(User).filter(User.id != 1).all()
+    return render_template("bet.html", dealer=dealer, others=others, id=1, count=1)
 
 
 @app.route("/again/<int:id>/<int:count>", methods=["GET","POST"])
@@ -301,7 +306,7 @@ def next_game():
     session.commit()
     dealer = session.query(User).filter(User.id == 1).first()
     others = session.query(User).filter(User.id != 1).all()
-    return render_template("bet.html", dealer=dealer, others=others, id=1)
+    return render_template("bet.html", dealer=dealer, others=others, id=1, count=1)
 
 @app.route("/end", methods=["GET", "POST"])
 def end():
