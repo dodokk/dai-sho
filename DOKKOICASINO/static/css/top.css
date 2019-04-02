@@ -1,0 +1,117 @@
+body{
+    height: 90vh;
+    background-color: rgb(43, 43, 43);
+    text-align: center;
+    margin: 0;
+    
+}
+
+h1{
+    font-family: 'ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 20px;
+    margin-top: 70px;
+
+}
+.video{
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+video{
+    height: 400px;
+    width: 400px;
+}
+
+.participants{
+   position: relative;
+
+}
+input{
+　　display: block;
+    width: 150px;
+    height: 40px;
+    margin: 0 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size:25px;
+    outline: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    border-style: solid;
+}
+input:focus::placeholder{
+    color: transparent;
+}
+
+.player1{
+     border-color:rgb(216, 57, 19);
+}
+
+.player2{
+     border-color:rgb(47, 153, 178);
+}
+
+.player3{
+     border-color:rgb(255, 184, 49);
+    display: none;
+}
+
+.player4{
+     border-color:rgb(47, 178, 67);
+    display: none;
+}
+
+.player5{
+     border-color:rgb(159, 159, 159);
+    display: none;
+}
+.plas{
+    display: inline;
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+    top:35px;
+}
+.plas:hover{
+    opacity: 0.7;
+}
+.plas:active{
+    font-size: 25px;
+}
+
+.submit{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFF;
+  width: 100px;
+  height: 100px;
+  line-height: 92px;
+  border: double 4px #FFF;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  background-color:rgb(43, 43, 43);
+  transition: .4s;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.submit:hover {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}

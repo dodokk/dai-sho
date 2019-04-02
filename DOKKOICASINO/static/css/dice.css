@@ -1,0 +1,194 @@
+body{
+    height: 100vh;
+    font-family: 'ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+    margin: 0;
+}
+
+#dice{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background-image: url(/static/pic/back_dice.png);
+    background-size: cover;
+    text-align: center;
+}
+.please{
+   margin-top: 0px;
+   padding: 50px 0;
+   font-size: 40px;
+   color: white;
+}
+
+#results{
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(43, 43, 43);
+}
+.dices{
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.anime2{
+    margin: 0 50px;
+}
+.anime{
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+#start{
+    width: 200px;
+    height: 50px;
+    background-color: #2980b9;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-decoration: none;
+  color: #FFF;
+  border: double 4px #FFF;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  background-color:rgba(33, 39, 98, 0.5);
+  transition: .4s;
+   cursor: pointer;
+}
+
+
+#start:hover {
+  opacity: 0.7;
+}
+#btn{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFF;
+  width: 100px;
+  height: 100px;
+  line-height: 97px;
+  border: double 4px #FFF;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  background-color:rgba(33, 39, 98, 0.5);
+  transition: .4s;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+    letter-spacing: 1px;
+    display: none;
+}
+
+#btn:hover {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.top{
+    font-size: 50px;
+    letter-spacing: 3px;
+    margin-left: 20px;
+    padding-top:  20px;
+    color:white;
+}
+.con{
+    width: 50px;
+    height: 50px;
+    float: left;
+
+    left: 100px;
+}
+.con2{
+    margin: 0 20px;
+}
+.cons{
+    position: absolute;
+    left: 500px;
+    top: 30px;
+       
+}
+.player{
+    float: left;
+    color:white;
+    width: 17%;
+    margin: 10px;
+    text-align: center;
+}
+
+.player1{
+    margin-left: 55px;
+}
+.h1{
+    text-align: center;
+}
+
+img{
+    display: block;
+    float: left;
+    vertical-align: middle;
+    object-fit: cover;
+}
+p{
+    height: 50px;
+    margin: 3px;
+    margin-left: 5px;
+    line-height: 50px;
+}
+.result{
+    background-color:  rgb(64, 64, 64);
+    border-width: 10px;
+    border-color:white;
+    text-align: left;
+}
+.triple{
+    margin-top: 12px;
+}
+
+.total{
+    padding-top: 30px;
+    width: 100%;
+    height: 40px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-align: left;
+    border-bottom:solid 3px white;
+}
+
+.total>p{
+    float: right;
+    font-size: 25px;
+    letter-spacing: 0;
+}
+.date{
+    display: none;
+}
+
+.submit{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFF;
+  width: 100px;
+  height: 100px;
+  line-height: 92px;
+  border: double 4px #FFF;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  background-color:rgb(43, 43, 43);
+  transition: .4s;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.submit:hover {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}

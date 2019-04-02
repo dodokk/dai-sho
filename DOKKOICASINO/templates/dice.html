@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/dice.css">
+    <script type="text/javascript" src="/static/js/jquery-dice-3.3.1.min.js"></script>
+  </head>
+
+  <body>
+
+<div id="dice">
+    <h1 class="please">Please shake the dices!!</h1>
+        <div class="dices">
+            <div class="anime anime1"></div>
+            <div class="anime anime2"></div>
+            <div class="anime anime3"></div>
+       </div>
+    <div id="start">Shake!!</div>
+      <div id=btn>result</div>
+</div>
+
+<div id="results">
+
+     <div class="date">
+    <div id="dice1">{{dice[0]}}</div>
+    <div id="dice2">{{dice[1]}}</div>
+    <div id="dice3">{{dice[2]}}</div>
+    </div>
+    <div class="top">RESULT</div>
+    <div class="cons">
+        <div class="con con1"></div>
+        <div class="con con2"></div>
+        <div class="con con3"></div>
+    </div>
+     <div class="player player1">
+      <h1>{{ dealer.name }}</h1>
+      <div style="width:100%;height:300px;overflow:auto;" class="result">
+         <p>大： - </p>
+         <p>小： - </p>
+         <p><img src="/static/pic/doubleone.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/doubletwo.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/doublethree.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/doublefour.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/doublefive.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/doublesix.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/tripleone.jpg" width="40%" class="triple">： - </p>
+         <p><img src="/static/pic/tripletwo.jpg" width="40%" class="triple">： - </p>
+         <p><img src="/static/pic/triplethree.jpg" width="40%" class="triple">： - </p>
+         <p><img src="/static/pic/triplefour.jpg" width="40%" class="triple">： - </p>
+         <p><img src="/static/pic/triplefive.jpg" width="40%" class="triple">： - </p>
+         <p><img src="/static/pic/triplesix.jpg" width="40%" class="triple">： - </p>
+         <p><img src="/static/pic/anytriple.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double12.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double13.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double14.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double15.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double16.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double23.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double24.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double25.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double26.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double34.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double35.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double36.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double45.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/double56.jpg" height="100%">： - </p>
+         <p><img src="/static/pic/dice1.png" height="100%">： - </p>
+         <p><img src="/static/pic/dice2.png" height="100%">： - </p>
+         <p><img src="/static/pic/dice3.png" height="100%">： - </p>
+         <p><img src="/static/pic/dice4.png" height="100%">： - </p>
+         <p><img src="/static/pic/dice5.png" height="100%">： - </p>
+         <p><img src="/static/pic/dice6.png" height="100%">： - </p>
+
+
+      </div>
+         <div class="total">Total
+            <P>{{ dealer.money }}</P>
+
+         </div>
+     </div>
+    <div class="player player2">
+      <h1>{{ others[0].name }}</h1>
+      <div style="width:100%;height:300px;overflow:auto;" class="result">
+         <p>大：     {{ result[0][0] }}</p>
+         <p>小：     {{ result[0][1] }}</p>
+         <p><img src="/static/pic/doubleone.jpg" height="100%">：{{ result[0][2] }}</p>
+         <p><img src="/static/pic/doubletwo.jpg" height="100%">：{{ result[0][3] }}</p>
+         <p><img src="/static/pic/doublethree.jpg" height="100%">：{{ result[0][4] }}</p>
+         <p><img src="/static/pic/doublefour.jpg" height="100%">：{{ result[0][5] }}</p>
+         <p><img src="/static/pic/doublefive.jpg" height="100%">：{{ result[0][6] }}</p>
+         <p><img src="/static/pic/doublesix.jpg" height="100%">：{{ result[0][7] }}</p>
+         <p><img src="/static/pic/tripleone.jpg" width="40%" class="triple">：{{ result[0][8] }}</p>
+         <p><img src="/static/pic/tripletwo.jpg" width="40%" class="triple">：{{ result[0][9] }}</p>
+         <p><img src="/static/pic/triplethree.jpg" width="40%" class="triple">：{{ result[0][10] }}</p>
+         <p><img src="/static/pic/triplefour.jpg" width="40%" class="triple">：{{ result[0][11] }}</p>
+         <p><img src="/static/pic/triplefive.jpg" width="40%" class="triple">：{{ result[0][12] }}</p>
+         <p><img src="/static/pic/triplesix.jpg" width="40%" class="triple">：{{ result[0][13] }}</p>
+         <p><img src="/static/pic/anytriple.jpg" height="100%">：{{ result[0][14] }}</p>
+         <p><img src="/static/pic/double12.jpg" height="100%">：{{ result[0][15] }}</p>
+         <p><img src="/static/pic/double13.jpg" height="100%">：{{ result[0][16] }}</p>
+         <p><img src="/static/pic/double14.jpg" height="100%">：{{ result[0][17] }}</p>
+         <p><img src="/static/pic/double15.jpg" height="100%">：{{ result[0][18] }}</p>
+         <p><img src="/static/pic/double16.jpg" height="100%">：{{ result[0][19] }}</p>
+         <p><img src="/static/pic/double23.jpg" height="100%">：{{ result[0][20] }}</p>
+         <p><img src="/static/pic/double24.jpg" height="100%">：{{ result[0][21] }}</p>
+         <p><img src="/static/pic/double25.jpg" height="100%">：{{ result[0][22] }}</p>
+         <p><img src="/static/pic/double26.jpg" height="100%">：{{ result[0][23] }}</p>
+         <p><img src="/static/pic/double34.jpg" height="100%">：{{ result[0][24] }}</p>
+         <p><img src="/static/pic/double35.jpg" height="100%">：{{ result[0][25] }}</p>
+         <p><img src="/static/pic/double36.jpg" height="100%">：{{ result[0][26] }}</p>
+         <p><img src="/static/pic/double45.jpg" height="100%">：{{ result[0][27] }}</p>
+         <p><img src="/static/pic/double56.jpg" height="100%">：{{ result[0][28] }}</p>
+         <p><img src="/static/pic/dice1.png" height="100%">：{{ result[0][29] }}</p>
+         <p><img src="/static/pic/dice2.png" height="100%">：{{ result[0][30] }}</p>
+         <p><img src="/static/pic/dice3.png" height="100%">：{{ result[0][31] }}</p>
+         <p><img src="/static/pic/dice4.png" height="100%">：{{ result[0][32] }}</p>
+         <p><img src="/static/pic/dice5.png" height="100%">：{{ result[0][33] }}</p>
+         <p><img src="/static/pic/dice6.png" height="100%">：{{ result[0][34] }}</p>
+
+
+      </div>
+          <div class="total">Total
+            <P>{{ others[0].money }}</P>
+
+         </div>
+     </div>
+
+    <div class="player player3">
+      <h1>{{ others[1].name }}</h1>
+      <div style="width:100%;height:300px;overflow:auto;"  class="result">
+        <p>大：{{ result[1][0] }}</p>
+        <p>小：{{ result[1][1] }}</p>
+        <p><img src="/static/pic/doubleone.jpg" height="100%">：{{ result[1][2] }}</p>
+        <p><img src="/static/pic/doubletwo.jpg" height="100%">：{{ result[1][3] }}</p>
+        <p><img src="/static/pic/doublethree.jpg" height="100%">：{{ result[1][4] }}</p>
+        <p><img src="/static/pic/doublefour.jpg" height="100%">：{{ result[1][5] }}</p>
+        <p><img src="/static/pic/doublefive.jpg" height="100%">：{{ result[1][6] }}</p>
+        <p><img src="/static/pic/doublesix.jpg" height="100%">：{{ result[1][7] }}</p>
+        <p><img src="/static/pic/tripleone.jpg" width="40%" class="triple">：{{ result[1][8] }}</p>
+        <p><img src="/static/pic/tripletwo.jpg" width="40%" class="triple">：{{ result[1][9] }}</p>
+        <p><img src="/static/pic/triplethree.jpg" width="40%" class="triple">：{{ result[1][10] }}</p>
+        <p><img src="/static/pic/triplefour.jpg" width="40%" class="triple">：{{ result[1][11] }}</p>
+        <p><img src="/static/pic/triplefive.jpg" width="40%" class="triple">：{{ result[1][12] }}</p>
+        <p><img src="/static/pic/triplesix.jpg" width="40%" class="triple">：{{ result[1][13] }}</p>
+        <p><img src="/static/pic/anytriple.jpg" height="100%">：{{ result[1][14] }}</p>
+        <p><img src="/static/pic/double12.jpg" height="100%">：{{ result[1][15] }}</p>
+        <p><img src="/static/pic/double13.jpg" height="100%">：{{ result[1][16] }}</p>
+        <p><img src="/static/pic/double14.jpg" height="100%">：{{ result[1][17] }}</p>
+        <p><img src="/static/pic/double15.jpg" height="100%">：{{ result[1][18] }}</p>
+        <p><img src="/static/pic/double16.jpg" height="100%">：{{ result[1][19] }}</p>
+        <p><img src="/static/pic/double23.jpg" height="100%">：{{ result[1][20] }}</p>
+        <p><img src="/static/pic/double24.jpg" height="100%">：{{ result[1][21] }}</p>
+        <p><img src="/static/pic/double25.jpg" height="100%">：{{ result[1][22] }}</p>
+        <p><img src="/static/pic/double26.jpg" height="100%">：{{ result[1][23] }}</p>
+        <p><img src="/static/pic/double34.jpg" height="100%">：{{ result[1][24] }}</p>
+        <p><img src="/static/pic/double35.jpg" height="100%">：{{ result[1][25] }}</p>
+        <p><img src="/static/pic/double36.jpg" height="100%">：{{ result[1][26] }}</p>
+        <p><img src="/static/pic/double45.jpg" height="100%">：{{ result[1][27] }}</p>
+        <p><img src="/static/pic/double56.jpg" height="100%">：{{ result[1][28] }}</p>
+        <p><img src="/static/pic/dice1.png" height="100%">：{{ result[1][29] }}</p>
+        <p><img src="/static/pic/dice2.png" height="100%">：{{ result[1][30] }}</p>
+        <p><img src="/static/pic/dice3.png" height="100%">：{{ result[1][31] }}</p>
+        <p><img src="/static/pic/dice4.png" height="100%">：{{ result[1][32] }}</p>
+        <p><img src="/static/pic/dice5.png" height="100%">：{{ result[1][33] }}</p>
+        <p><img src="/static/pic/dice6.png" height="100%">：{{ result[1][34] }}</p>
+
+
+
+      </div>
+          <div class="total">Total
+            <P>{{ others[1].money }}</P>
+
+         </div>
+     </div>
+    <div class="player player4">
+      <h1>{{ others[2].name }}</h1>
+      <div style="width:100%;height:300px;overflow:auto;" class="result">
+        <p>大：{{ result[2][0] }}</p>
+        <p>小：{{ result[2][1] }}</p>
+        <p><img src="/static/pic/doubleone.jpg" height="100%">：{{ result[2][2] }}</p>
+        <p><img src="/static/pic/doubletwo.jpg" height="100%">：{{ result[2][3] }}</p>
+        <p><img src="/static/pic/doublethree.jpg" height="100%">：{{ result[2][4] }}</p>
+        <p><img src="/static/pic/doublefour.jpg" height="100%">：{{ result[2][5] }}</p>
+        <p><img src="/static/pic/doublefive.jpg" height="100%">：{{ result[2][6] }}</p>
+        <p><img src="/static/pic/doublesix.jpg" height="100%">：{{ result[2][7] }}</p>
+        <p><img src="/static/pic/tripleone.jpg" width="40%" class="triple">：{{ result[2][8] }}</p>
+        <p><img src="/static/pic/tripletwo.jpg" width="40%" class="triple">：{{ result[2][9] }}</p>
+        <p><img src="/static/pic/triplethree.jpg" width="40%" class="triple">：{{ result[2][10] }}</p>
+        <p><img src="/static/pic/triplefour.jpg" width="40%" class="triple">：{{ result[2][11] }}</p>
+        <p><img src="/static/pic/triplefive.jpg" width="40%" class="triple">：{{ result[2][12] }}</p>
+        <p><img src="/static/pic/triplesix.jpg" width="40%" class="triple">：{{ result[2][13] }}</p>
+        <p><img src="/static/pic/anytriple.jpg" height="100%">：{{ result[2][14] }}</p>
+        <p><img src="/static/pic/double12.jpg" height="100%">：{{ result[2][15] }}</p>
+        <p><img src="/static/pic/double13.jpg" height="100%">：{{ result[2][16] }}</p>
+        <p><img src="/static/pic/double14.jpg" height="100%">：{{ result[2][17] }}</p>
+        <p><img src="/static/pic/double15.jpg" height="100%">：{{ result[2][18] }}</p>
+        <p><img src="/static/pic/double16.jpg" height="100%">：{{ result[2][19] }}</p>
+        <p><img src="/static/pic/double23.jpg" height="100%">：{{ result[2][20] }}</p>
+        <p><img src="/static/pic/double24.jpg" height="100%">：{{ result[2][21] }}</p>
+        <p><img src="/static/pic/double25.jpg" height="100%">：{{ result[2][22] }}</p>
+        <p><img src="/static/pic/double26.jpg" height="100%">：{{ result[2][23] }}</p>
+        <p><img src="/static/pic/double34.jpg" height="100%">：{{ result[2][24] }}</p>
+        <p><img src="/static/pic/double35.jpg" height="100%">：{{ result[2][25] }}</p>
+        <p><img src="/static/pic/double36.jpg" height="100%">：{{ result[2][26] }}</p>
+        <p><img src="/static/pic/double45.jpg" height="100%">：{{ result[2][27] }}</p>
+        <p><img src="/static/pic/double56.jpg" height="100%">：{{ result[2][28] }}</p>
+        <p><img src="/static/pic/dice1.png" height="100%">：{{ result[2][29] }}</p>
+        <p><img src="/static/pic/dice2.png" height="100%">：{{ result[2][30] }}</p>
+        <p><img src="/static/pic/dice3.png" height="100%">：{{ result[2][31] }}</p>
+        <p><img src="/static/pic/dice4.png" height="100%">：{{ result[2][32] }}</p>
+        <p><img src="/static/pic/dice5.png" height="100%">：{{ result[2][33] }}</p>
+        <p><img src="/static/pic/dice6.png" height="100%">：{{ result[2][34] }}</p>
+
+
+
+      </div>
+          <div class="total">Total
+            <P>{{ others[2].money }}</P>
+
+         </div>
+     </div>
+    <div class="player player5">
+      <h1>{{ others[3].name }}</h1>
+      <div style="width:100%;height:300px;overflow:auto;" class="result">
+        <p>大：{{ result[3][0] }}</p>
+        <p>小：{{ result[3][1] }}</p>
+        <p><img src="/static/pic/doubleone.jpg" height="100%">：{{ result[3][2] }}</p>
+        <p><img src="/static/pic/doubletwo.jpg" height="100%">：{{ result[3][3] }}</p>
+        <p><img src="/static/pic/doublethree.jpg" height="100%">：{{ result[3][4] }}</p>
+        <p><img src="/static/pic/doublefour.jpg" height="100%">：{{ result[3][5] }}</p>
+        <p><img src="/static/pic/doublefive.jpg" height="100%">：{{ result[3][6] }}</p>
+        <p><img src="/static/pic/doublesix.jpg" height="100%">：{{ result[3][7] }}</p>
+        <p><img src="/static/pic/tripleone.jpg" width="40%" class="triple">：{{ result[3][8] }}</p>
+        <p><img src="/static/pic/tripletwo.jpg" width="40%" class="triple">：{{ result[3][9] }}</p>
+        <p><img src="/static/pic/triplethree.jpg" width="40%" class="triple">：{{ result[3][10] }}</p>
+        <p><img src="/static/pic/triplefour.jpg" width="40%" class="triple">：{{ result[3][11] }}</p>
+        <p><img src="/static/pic/triplefive.jpg" width="40%" class="triple">：{{ result[3][12] }}</p>
+        <p><img src="/static/pic/triplesix.jpg" width="40%" class="triple">：{{ result[3][13] }}</p>
+        <p><img src="/static/pic/anytriple.jpg" height="100%">：{{ result[3][14] }}</p>
+        <p><img src="/static/pic/double12.jpg" height="100%">：{{ result[3][15] }}</p>
+        <p><img src="/static/pic/double13.jpg" height="100%">：{{ result[3][16] }}</p>
+        <p><img src="/static/pic/double14.jpg" height="100%">：{{ result[3][17] }}</p>
+        <p><img src="/static/pic/double15.jpg" height="100%">：{{ result[3][18] }}</p>
+        <p><img src="/static/pic/double16.jpg" height="100%">：{{ result[3][19] }}</p>
+        <p><img src="/static/pic/double23.jpg" height="100%">：{{ result[3][20] }}</p>
+        <p><img src="/static/pic/double24.jpg" height="100%">：{{ result[3][21] }}</p>
+        <p><img src="/static/pic/double25.jpg" height="100%">：{{ result[3][22] }}</p>
+        <p><img src="/static/pic/double26.jpg" height="100%">：{{ result[3][23] }}</p>
+        <p><img src="/static/pic/double34.jpg" height="100%">：{{ result[3][24] }}</p>
+        <p><img src="/static/pic/double35.jpg" height="100%">：{{ result[3][25] }}</p>
+        <p><img src="/static/pic/double36.jpg" height="100%">：{{ result[3][26] }}</p>
+        <p><img src="/static/pic/double45.jpg" height="100%">：{{ result[3][27] }}</p>
+        <p><img src="/static/pic/double56.jpg" height="100%">：{{ result[3][28] }}</p>
+        <p><img src="/static/pic/dice1.png" height="100%">：{{ result[3][29] }}</p>
+        <p><img src="/static/pic/dice2.png" height="100%">：{{ result[3][30] }}</p>
+        <p><img src="/static/pic/dice3.png" height="100%">：{{ result[3][31] }}</p>
+        <p><img src="/static/pic/dice4.png" height="100%">：{{ result[3][32] }}</p>
+        <p><img src="/static/pic/dice5.png" height="100%">：{{ result[3][33] }}</p>
+        <p><img src="/static/pic/dice6.png" height="100%">：{{ result[3][34] }}</p>
+
+
+      </div>
+          <div class="total">Total
+            <P>{{ others[3].money }}</P>
+
+         </div>
+     </div>
+
+
+    <form action="/again/{{ id }}/{{ count }}" method="post">
+      <button type="submit" name="button" class="submit">NEXT</button>
+    </form>
+</div>
+
+  </body>
+ <script src="/static/js/dice.js"></script>
+
+
+</html>

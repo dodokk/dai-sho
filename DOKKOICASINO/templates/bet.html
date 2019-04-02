@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/static/css/bet.css">
+  <script type="text/javascript" src="/static/js/jquery-bet-3.3.1.min.js"></script>
+</head>
+<body>
+
+<form action="/bet/{{ id }}/{{ count }}" method="post">
+
+ <div class="dealer">
+     Dealer：{{ dealer.name }}
+</div>
+  <div class="roof">
+<div class="box1 big" id="big">大</div>
+
+    <div class="box1 double">
+     <div class="double_cell double_1" id="double_1">
+      <img src="/static/pic/doubleone.jpg" height="100%" width="100%">
+     </div>
+     <div class="double_cell double_2" id="double_2" >
+      <img src="/static/pic/doubletwo.jpg" height="100%" width="100%">
+
+     </div>
+     <div class="double_cell double_3" id="double_3" >
+      <img src="/static/pic/doublethree.jpg" height="100%" width="100%">
+
+     </div>
+    </div>
+
+  <div class="box1 triple">
+     <div class="triple_cell triple_1" id="triple_1">
+      <img src="/static/pic/tripleone.jpg" height="100%" width="100%">
+
+     </div>
+     <div class="triple_cell triple_2" id="triple_2">
+      <img src="/static/pic/tripletwo.jpg" height="100%" width="100%">
+
+     </div>
+     <div class="triple_cell triple_3" id="triple_3">
+      <img src="/static/pic/triplethree.jpg" height="100%" width="100%">
+
+    </div>
+  </div>
+  <div class="box1 anytriple" id="anytriple">
+    <div class="anytriple_cell"  >
+      <img src="/static/pic/anytriple.jpg" height="100%" width="100%">
+
+      </div>
+  </div>
+<div class="box1 triple">
+     <div class="triple_cell triple_4" id="triple_4">
+      <img src="/static/pic/triplefour.jpg" height="100%" width="100%">
+
+     </div>
+     <div class="triple_cell triple_5" id="triple_5">
+      <img src="/static/pic/triplefive.jpg" height="100%" width="100%">
+
+     </div>
+     <div class="triple_cell triple_6" id="triple_6">
+      <img src="/static/pic/triplesix.jpg" height="100%" width="100%">
+
+    </div>
+  </div>
+ <div class="box1 double">
+     <div class="double_cell double_4" id="double_4">
+      <img src="/static/pic/doublefour.jpg" height="100%" width="100%">
+
+     </div>
+     <div class="double_cell double_5" id="double_5">
+      <img src="/static/pic/doublefive.jpg" height="100%" width="100%">
+
+     </div>
+     <div class="double_cell double_6" id="double_6">
+      <img src="/static/pic/doublesix.jpg" height="100%" width="100%">
+
+     </div>
+    </div>
+<div class="box1 small" id="small">小
+      </div>
+
+    </div>
+<div class="middle">
+<div class="box2">
+    <div class="number_cell number4" id="sum_4">4</div>
+    <div class="number_cell number5" id="sum_5">5</div>
+    <div class="number_cell number6" id="sum_6">6</div>
+    <div class="number_cell number7" id="sum_7">7</div>
+    <div class="number_cell number8" id="sum_8">8</div>
+    <div class="number_cell number9" id="sum_9">9</div>
+    <div class="number_cell number10" id="sum_10">10</div>
+    <div class="number_cell"></div>
+    <div class="number_cell number11" id="sum_11">11</div>
+    <div class="number_cell number12" id="sum_12">12</div>
+    <div class="number_cell number13" id="sum_13">13</div>
+    <div class="number_cell number14" id="sum_14">14</div>
+    <div class="number_cell number15" id="sum_15">15</div>
+    <div class="number_cell number16" id="sum_16">16</div>
+    <div class="number_cell number17" id="sum_17">17</div>
+
+</div>
+<div class="box3 conbi">
+  <div class="conbi_cell conbi_1">
+      <img src="/static/pic/double12.jpg" height="100%" width="100%">
+  </div>
+ <div class="conbi_cell conbi_2">
+      <img src="/static/pic/double13.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_3">
+      <img src="/static/pic/double14.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_4">
+      <img src="/static/pic/double15.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_5">
+      <img src="/static/pic/double16.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_6">
+      <img src="/static/pic/double23.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_7">
+      <img src="/static/pic/double24.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_8">
+      <img src="/static/pic/double25.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_9">
+      <img src="/static/pic/double26.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_10">
+      <img src="/static/pic/double34.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_11">
+      <img src="/static/pic/double35.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_12">
+      <img src="/static/pic/double36.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_13">
+      <img src="/static/pic/double45.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_14">
+      <img src="/static/pic/double46.jpg" height="100%" width="100%">
+  </div>
+    <div class="conbi_cell conbi_15">
+      <img src="/static/pic/double56.jpg" height="100%" width="100%">
+  </div>
+</div>
+
+<div class="box4 in">
+    <div class="in_cell in_1">
+        <img src="/static/pic/dice1.png" height="100%" width="100%">
+    </div>
+    <div class="in_cell in_2">
+        <img src="/static/pic/dice2.png" height="100%" width="100%">
+    </div>
+    <div class="in_cell in_3">
+        <img src="/static/pic/dice3.png" height="100%" width="100%">
+    </div>
+    <div class="in_cell in_4">
+        <img src="/static/pic/dice4.png" height="100%" width="100%">
+    </div>
+    <div class="in_cell in_5">
+        <img src="/static/pic/dice5.png" height="100%" width="100%">
+    </div>
+    <div class="in_cell in_6">
+        <img src="/static/pic/dice6.png" height="100%" width="100%">
+    </div>
+</div>
+</div>
+      <div id=main_modal>
+     <div id="modal">
+         <div class=modal_contents>
+             <h1 id=content></h1>
+             <p>Please bet</p>
+             <div class=players>
+                 <div class="player">{{ others[0].name }}</div>
+                 <div class="player">{{ others[1].name }}</div>
+                 <div class="player">{{ others[2].name }}</div>
+                 <div class="player">{{ others[3].name }}</div>
+             </div>
+             <div class=inputs id=input_big>
+             <div><input name="big"></div>
+             <div><input name="big"></div>
+             <div><input name="big"></div>
+             <div><input name="big"></div>
+             </div>
+             <div class=inputs id=input_small>
+             <div><input name="small"></div>
+             <div><input name="small"></div>
+             <div><input name="small"></div>
+             <div><input name="small"></div>
+             </div>
+             <div class=inputs id=input_double_1>
+             <div><input name="double_1"></div>
+             <div><input name="double_1"></div>
+             <div><input name="double_1"></div>
+             <div><input name="double_1"></div>
+             </div>
+             <div class=inputs id=input_double_2>
+             <div><input name="double_2"></div>
+             <div><input name="double_2"></div>
+             <div><input name="double_2"></div>
+             <div><input name="double_2"></div>
+             </div>
+             <div class=inputs id=input_double_3>
+             <div><input name="double_3"></div>
+             <div><input name="double_3"></div>
+             <div><input name="double_3"></div>
+             <div><input name="double_3"></div>
+             </div>
+             <div class=inputs id=input_double_4>
+             <div><input name="double_4"></div>
+             <div><input name="double_4"></div>
+             <div><input name="double_4"></div>
+             <div><input name="double_4"></div>
+             </div>
+             <div class=inputs id=input_double_5>
+             <div><input name="double_5"></div>
+             <div><input name="double_5"></div>
+             <div><input name="double_5"></div>
+             <div><input name="double_5"></div>
+             </div>
+             <div class=inputs id=input_double_6>
+             <div><input name="double_6"></div>
+             <div><input name="double_6"></div>
+             <div><input name="double_6"></div>
+             <div><input name="double_6"></div>
+             </div>
+              <div class=inputs id=input_triple_1>
+             <div><input name="triple_1"></div>
+             <div><input name="triple_1"></div>
+             <div><input name="triple_1"></div>
+             <div><input name="triple_1"></div>
+             </div>
+             <div class=inputs id=input_triple_2>
+             <div><input name="triple_2"></div>
+             <div><input name="triple_2"></div>
+             <div><input name="triple_2"></div>
+             <div><input name="triple_2"></div>
+             </div>
+             <div class=inputs id=input_triple_3>
+             <div><input name="triple_3"></div>
+             <div><input name="triple_3"></div>
+             <div><input name="triple_3"></div>
+             <div><input name="triple_3"></div>
+             </div>
+             <div class=inputs id=input_triple_4>
+             <div><input name="triple_4"></div>
+             <div><input name="triple_4"></div>
+             <div><input name="triple_4"></div>
+             <div><input name="triple_4"></div>
+             </div>
+             <div class=inputs id=input_triple_5>
+             <div><input name="triple_5"></div>
+             <div><input name="triple_5"></div>
+             <div><input name="triple_5"></div>
+             <div><input name="triple_5"></div>
+             </div>
+             <div class=inputs id=input_triple_6>
+             <div><input name="triple_6"></div>
+             <div><input name="triple_6"></div>
+             <div><input name="triple_6"></div>
+             <div><input name="triple_6"></div>
+             </div>
+             <div class=inputs id=input_anytriple>
+             <div><input name="anytriple"></div>
+             <div><input name="anytriple"></div>
+             <div><input name="anytriple"></div>
+             <div><input name="anytriple"></div>
+             </div>
+             <div class=inputs id=input_sum_4>
+             <div><input name="sum_4"></div>
+             <div><input name="sum_4"></div>
+             <div><input name="sum_4"></div>
+             <div><input name="sum_4"></div>
+             </div>
+             <div class=inputs id=input_sum_5>
+             <div><input name="sum_5"></div>
+             <div><input name="sum_5"></div>
+             <div><input name="sum_5"></div>
+             <div><input name="sum_5"></div>
+             </div>
+             <div class=inputs id=input_sum_6>
+             <div><input name="sum_6"></div>
+             <div><input name="sum_6"></div>
+             <div><input name="sum_6"></div>
+             <div><input name="sum_6"></div>
+             </div>
+             <div class=inputs id=input_sum_7>
+             <div><input name="sum_7"></div>
+             <div><input name="sum_7"></div>
+             <div><input name="sum_7"></div>
+             <div><input name="sum_7"></div>
+             </div>
+             <div class=inputs id=input_sum_8>
+             <div><input name="sum_8"></div>
+             <div><input name="sum_8"></div>
+             <div><input name="sum_8"></div>
+             <div><input name="sum_8"></div>
+             </div>
+             <div class=inputs id=input_sum_9>
+             <div><input name="sum_9"></div>
+             <div><input name="sum_9"></div>
+             <div><input name="sum_9"></div>
+             <div><input name="sum_9"></div>
+             </div>
+             <div class=inputs id=input_sum_10>
+             <div><input name="sum_10"></div>
+             <div><input name="sum_10"></div>
+             <div><input name="sum_10"></div>
+             <div><input name="sum_10"></div>
+             </div>
+             <div class=inputs id=input_sum_11>
+             <div><input name="sum_11"></div>
+             <div><input name="sum_11"></div>
+             <div><input name="sum_11"></div>
+             <div><input name="sum_11"></div>
+             </div>
+             <div class=inputs id=input_sum_12>
+             <div><input name="sum_12"></div>
+             <div><input name="sum_12"></div>
+             <div><input name="sum_12"></div>
+             <div><input name="sum_12"></div>
+             </div>
+             <div class=inputs id=input_sum_13>
+             <div><input name="sum_13"></div>
+             <div><input name="sum_13"></div>
+             <div><input name="sum_13"></div>
+             <div><input name="sum_13"></div>
+             </div>
+             <div class=inputs id=input_sum_14>
+             <div><input name="sum_14"></div>
+             <div><input name="sum_14"></div>
+             <div><input name="sum_14"></div>
+             <div><input name="sum_14"></div>
+             </div>
+             <div class=inputs id=input_sum_15>
+             <div><input name="sum_15"></div>
+             <div><input name="sum_15"></div>
+             <div><input name="sum_15"></div>
+             <div><input name="sum_15"></div>
+             </div>
+             <div class=inputs id=input_sum_16>
+             <div><input name="sum_16"></div>
+             <div><input name="sum_16"></div>
+             <div><input name="sum_16"></div>
+             <div><input name="sum_16"></div>
+             </div>
+             <div class=inputs id=input_sum_17>
+             <div><input name="sum_17"></div>
+             <div><input name="sum_17"></div>
+             <div><input name="sum_17"></div>
+             <div><input name="sum_17"></div>
+             </div>
+             <div class=inputs id=input_conbi_1>
+             <div><input name="combi_12"></div>
+             <div><input name="combi_12"></div>
+             <div><input name="combi_12"></div>
+             <div><input name="combi_12"></div>
+             </div>
+             <div class=inputs id=input_conbi_2>
+             <div><input name="combi_13"></div>
+             <div><input name="combi_13"></div>
+             <div><input name="combi_13"></div>
+             <div><input name="combi_13"></div>
+             </div>
+             <div class=inputs id=input_conbi_3>
+             <div><input name="combi_14"></div>
+             <div><input name="combi_14"></div>
+             <div><input name="combi_14"></div>
+             <div><input name="combi_14"></div>
+             </div>
+             <div class=inputs id=input_conbi_4>
+             <div><input name="combi_15"></div>
+             <div><input name="combi_15"></div>
+             <div><input name="combi_15"></div>
+             <div><input name="combi_15"></div>
+             </div>
+             <div class=inputs id=input_conbi_5>
+             <div><input name="combi_16"></div>
+             <div><input name="combi_16"></div>
+             <div><input name="combi_16"></div>
+             <div><input name="combi_16"></div>
+             </div>
+             <div class=inputs id=input_conbi_6>
+             <div><input name="combi_23"></div>
+             <div><input name="combi_23"></div>
+             <div><input name="combi_23"></div>
+             <div><input name="combi_23"></div>
+             </div>
+             <div class=inputs id=input_conbi_7>
+             <div><input name="combi_24"></div>
+             <div><input name="combi_24"></div>
+             <div><input name="combi_24"></div>
+             <div><input name="combi_24"></div>
+             </div>
+             <div class=inputs id=input_conbi_8>
+             <div><input name="combi_25"></div>
+             <div><input name="combi_25"></div>
+             <div><input name="combi_25"></div>
+             <div><input name="combi_25"></div>
+             </div>
+             <div class=inputs id=input_conbi_9>
+             <div><input name="combi_26"></div>
+             <div><input name="combi_26"></div>
+             <div><input name="combi_26"></div>
+             <div><input name="combi_26"></div>
+             </div>
+             <div class=inputs id=input_conbi_10>
+             <div><input name="combi_34"></div>
+             <div><input name="combi_34"></div>
+             <div><input name="combi_34"></div>
+             <div><input name="combi_34"></div>
+             </div>
+             <div class=inputs id=input_conbi_11>
+             <div><input name="combi_35"></div>
+             <div><input name="combi_35"></div>
+             <div><input name="combi_35"></div>
+             <div><input name="combi_35"></div>
+             </div>
+             <div class=inputs id=input_conbi_12>
+             <div><input name="combi_36"></div>
+             <div><input name="combi_36"></div>
+             <div><input name="combi_36"></div>
+             <div><input name="combi_36"></div>
+             </div>
+             <div class=inputs id=input_conbi_13>
+             <div><input name="combi_45"></div>
+             <div><input name="combi_45"></div>
+             <div><input name="combi_45"></div>
+             <div><input name="combi_45"></div>
+             </div>
+             <div class=inputs id=input_conbi_14>
+             <div><input name="combi_46"></div>
+             <div><input name="combi_46"></div>
+             <div><input name="combi_46"></div>
+             <div><input name="combi_46"></div>
+             </div>
+             <div class=inputs id=input_conbi_15>
+             <div><input name="combi_56"></div>
+             <div><input name="combi_56"></div>
+             <div><input name="combi_56"></div>
+             <div><input name="combi_56"></div>
+             </div>
+             <!-- <div class=inputs id=input_conbi_16>
+             <div><input name="conbi_56" value="余分"></div>
+             <div><input name="conbi_56" value="余分"></div>
+             <div><input name="conbi_56" value="余分"></div>
+             <div><input name="conbi_56" value="余分"></div>
+             </div>
+              <div class=inputs id=input_conbi_17>
+             <div><input name="conbi_56" value="余分"></div>
+             <div><input name="conbi_56" value="余分"></div>
+             <div><input name="conbi_56" value="余分"></div>
+             <div><input name="conbi_56" value="余分"></div>
+             </div> -->
+              <div class=inputs id=input_in_1>
+             <div><input name="in_1"></div>
+             <div><input name="in_1"></div>
+             <div><input name="in_1"></div>
+             <div><input name="in_1"></div>
+             </div>
+             <div class=inputs id=input_in_2>
+             <div><input name="in_2"></div>
+             <div><input name="in_2"></div>
+             <div><input name="in_2"></div>
+             <div><input name="in_2"></div>
+             </div>
+             <div class=inputs id=input_in_3>
+             <div><input name="in_3"></div>
+             <div><input name="in_3"></div>
+             <div><input name="in_3"></div>
+             <div><input name="in_3"></div>
+             </div>
+             <div class=inputs id=input_in_4>
+             <div><input name="in_4"></div>
+             <div><input name="in_4"></div>
+             <div><input name="in_4"></div>
+             <div><input name="in_4"></div>
+             </div>
+             <div class=inputs id=input_in_5>
+             <div><input name="in_5"></div>
+             <div><input name="in_5"></div>
+             <div><input name="in_5"></div>
+             <div><input name="in_5"></div>
+             </div>
+             <div class=inputs id=input_in_6>
+             <div><input name="in_6"></div>
+             <div><input name="in_6"></div>
+             <div><input name="in_6"></div>
+             <div><input name="in_6"></div>
+             </div>
+
+
+
+         </div>
+        <div id="close">+</div>
+    </div>
+      </div>
+
+<input type="submit"class="submit" value="NEXT">
+
+</form>
+</body>
+
+ <script src="/static/js/bet.js"></script>
+</html>

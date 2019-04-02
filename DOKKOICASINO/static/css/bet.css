@@ -1,0 +1,311 @@
+body{
+    height: 90vh;
+    background-image: url(/static/pic/bet_back.jpg);
+    background-size: cover;
+     font-family: 'ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+}
+
+
+
+
+
+
+.dealer{
+    width: 500px;
+    height: 50px;
+    margin: 20px auto;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+}
+
+.roof{
+    width: 1168px;
+    margin: 0 auto;
+}
+.big{
+    height: 122px;
+    width: 122px;
+    background-color: white;
+    margin-right: 1px;
+    font-size:100px;
+    text-align: center;
+    line-height: 122px;
+
+}
+.big:hover{
+     transition-duration: 0.3s;
+    opacity: 0.7;
+}
+.small:hover{
+     transition-duration: 0.3s;
+    opacity: 0.7;
+}
+.number_cell:hover{
+     transition-duration: 0.3s;
+    opacity: 0.7;
+}
+
+img:hover{
+    transition-duration: 0.3s;
+    opacity: 0.7;
+}
+
+.box1{
+   float: left;
+}
+.double_cell{
+    height: 122px;
+    width: 70px;
+    float: left;
+    margin-right: 1px;
+    position: relative;
+}
+.double_1{
+    position: relative;
+}
+
+
+.triple_cell{
+    height: 40px;
+    width: 141px;
+    margin-bottom: 1px;
+    position: relative;
+}
+
+
+.triple_3 .triple_6{
+    margin-bottom: 0px;
+}
+.anytriple_cell{
+    height: 122px;
+    width: 212px;
+    margin: 0px 1px;
+    position: relative;
+}
+
+.middle{
+    width: 1064px;
+    margin: 0 auto;
+}
+
+.double_4{
+    margin-left: 1px;
+}
+.double_6{
+    margin-right: 0px;
+}
+
+.small{
+    height: 122px;
+    width: 122px;
+    background-color: white;
+    margin-left: 1px;
+       font-size:100px;
+     text-align: center;
+    line-height: 122px;
+    position: relative;
+
+}
+.box2{
+    float: left;
+}
+.number_cell{
+    height: 70px;
+    width: 70px;
+    float: left;
+    text-align: center;
+    line-height: 70px;
+    font-size: 40px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    background-color: white;
+}
+
+
+#sum_4{
+    position: relative;
+}
+#sum_5{
+    position: relative;
+}
+#sum_6{
+    position: relative;
+}
+#sum_7{
+    position: relative;
+}
+#sum_8{
+    position: relative;
+}
+#sum_9{
+    position: relative;
+}
+#sum_10{
+    position: relative;
+}
+#sum_11{
+    position: relative;
+}
+#sum_12{
+    position: relative;
+}
+#sum_13{
+    position: relative;
+}
+#sum_14{
+    position: relative;
+}
+#sum_15{
+    position: relative;
+}
+#sum_16{
+    position: relative;
+}
+#sum_17{
+    position: relative;
+}
+
+.number4{
+    margin-left: 0px;
+}
+.box3{
+    float: left;
+}
+.conbi_cell{
+    height: 130px;
+    width: 70px;
+    float: left;
+    margin-left: 1px;
+}
+.conbi_1{
+    margin-left: 0px;
+}
+
+.box4{
+    float: left;
+}
+
+.in_cell{
+    height: 176.5px;
+    width: 176.5px;
+    float: left;
+    background-color: white;
+    margin-left: 1px;
+    margin-top: 1px;
+}
+
+.in_1{
+    margin-left: 0px;
+}
+.players{
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    left: 30px;
+    top: 150px;
+}
+.player{
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin: 11.5px auto;
+    font-size: 20px;
+    color: black;
+
+}
+.inputs{
+    position: absolute;
+    right:20px;
+    top: 150px;
+    display: none;
+}
+input{
+    margin: 15px;
+    height: 30px;
+    line-height:30px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    outline: 0;
+    border:0;
+    width: 150px;
+}
+h1{
+    font-size: 40px;   
+}
+.modal_contents>p{
+    font-size: 25px;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 150px;
+    top:80px;
+    
+    
+}
+#main_modal{
+    height:100%;
+    width:100%;
+    position: absolute;
+    left: 0px;
+    background-color: rgba(0,0,0,0.7);
+    top:0;
+    z-index: 1;
+    display: none;
+}
+#modal {
+  position: absolute;
+  top: 10%;
+  left: 32.5%;
+  background-color: #e6ecf0;
+  border-radius: 10px;
+  width: 450px;
+  height: 450px;;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+
+}
+#close{
+    position: absolute;
+    top:0;
+    right: 19px;
+    font-size:40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    margin: 0;
+}
+
+#content{
+    padding-top:20px;
+}
+.dice{
+    float: left;
+}
+.submit{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFF;
+  width: 100px;
+  height: 100px;
+  line-height: 92px;
+  border: double 4px #FFF;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  background-color:rgba(33, 39, 98, 0.5);
+  transition: .4s;
+  position: absolute;
+  right: 0px;
+  bottom: 5px;
+}
+
+.submit:hover {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
