@@ -68,6 +68,11 @@ def main_page():
         user4 = User(name = request.form["name4"], money = 0)
         user5 = User(name = request.form["name5"], money = 0)
 
+        if user1.name == "":
+            user1.name = "player1"
+        if user2.name == "":
+            user2.name = "player2"
+
         session.add(user1)
         session.add(user2)
         session.add(user3)
@@ -149,7 +154,6 @@ def bet_page(id, count):
 
             big = BetTable(name=name, position="big", value=0, bet=d(bets[0][i]))
             small = BetTable(name=name, position="small", value=0, bet=d(bets[1][i]))
-
             sum_4 = BetTable(name=name, position="sum", value=4, bet=d(bets[2][i]))
             sum_5 = BetTable(name=name, position="sum", value=5, bet=d(bets[3][i]))
             sum_6 = BetTable(name=name, position="sum", value=6, bet=d(bets[4][i]))
@@ -202,7 +206,6 @@ def bet_page(id, count):
 
             session.add(big)
             session.add(small)
-
             session.add(sum_4)
             session.add(sum_5)
             session.add(sum_6)
@@ -279,7 +282,9 @@ def bet_page(id, count):
         session.query(Dice).delete()
         session.commit()
 
-        if id == 5 and count == 2:
+        next_dealer = session.query(User).filter(User.id == id+2).first()
+
+        if (id == 5 and count == 2 ) or next_dealer.name == "":
             player = session.query(User).all()
             return render_template("result.html", player=player)
         elif count == 2:
@@ -319,4 +324,4 @@ def end():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=8888, threaded=True)
+    app.run()
