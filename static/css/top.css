@@ -1,7 +1,9 @@
 body{
-    height: 100vh;
+    height: 90vh;
     background-color: rgb(43, 43, 43);
     text-align: center;
+    margin: 0;
+    
 }
 
 h1{
@@ -90,18 +92,26 @@ input:focus::placeholder{
 }
 
 .submit{
-     display:block;
-     width: 250px;
-     height:70px;
-     line-height: 70px;
-     color: #FFF;
-     text-decoration: none;
-     text-align: center;
-     background-color: #f39800; /*ボタン色*/
-     border-radius: 5px; /*角丸*/
-     -webkit-transition: all 0.5s;
-     transition: all 0.5s;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFF;
+  width: 100px;
+  height: 100px;
+  line-height: 92px;
+  border: double 4px #FFF;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  background-color:rgb(43, 43, 43);
+  transition: .4s;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }
-.submit:hover{
-     background-color: #f9c500; /*ボタン色*/
+
+.submit:hover {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
 }

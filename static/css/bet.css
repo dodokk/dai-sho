@@ -1,18 +1,23 @@
 body{
-    height: 100vh;
-    background-color: rgb(43, 43, 43);
+    height: 90vh;
+    background-image: url(/static/pic/bet_back.jpg);
+    background-size: cover;
      font-family: 'ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
 }
 
 
-.player{
-    width: 200px;
+
+
+
+
+.dealer{
+    width: 500px;
     height: 50px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    font-size: 40px;
+    margin: 20px auto;
     color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
 }
 
 .roof{
@@ -46,16 +51,7 @@ img:hover{
     transition-duration: 0.3s;
     opacity: 0.7;
 }
-/*
-#input_big{
-        display: none;
-        z-index: 3;
-}
 
-#input_small{
-        display: none;
-}
-*/
 .box1{
    float: left;
 }
@@ -69,42 +65,8 @@ img:hover{
 .double_1{
     position: relative;
 }
-#input_double_1{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
-#input_double_2{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
-#input_double_3{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
-#input_double_4{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
-#input_double_5{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
-#input_double_6{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
+
+
 .triple_cell{
     height: 40px;
     width: 141px;
@@ -112,42 +74,7 @@ img:hover{
     position: relative;
 }
 
-#input_triple_1{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
-#input_triple_2{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
-#input_triple_3{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
-#input_triple_4{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
-#input_triple_5{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
-#input_triple_6{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
+
 .triple_3 .triple_6{
     margin-bottom: 0px;
 }
@@ -157,12 +84,7 @@ img:hover{
     margin: 0px 1px;
     position: relative;
 }
-#input_anytriple{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left:5px;
-}
+
 .middle{
     width: 1064px;
     margin: 0 auto;
@@ -244,87 +166,7 @@ img:hover{
 #sum_17{
     position: relative;
 }
-#input_sum_4{
-    display: none;
-    position: absolute;
-   top:-33px;
-    left:5px;
-}
-#input_sum_5{
-    display: none;
-    position: absolute;
-    top:-33px;
-    left:5px;
-}#input_sum_6{
-    display: none;
-    position: absolute;
-    top:-33px;
-    left:5px;
-}
-#input_sum_7{
-    display: none;
-    position: absolute;
-    top:-33px;
-    left:5px;
-}
-#input_sum_8{
-    display: none;
-    position: absolute;
-    top:-33px;
-    left:5px;
-}
-#input_sum_9{
-    display: none;
-    position: absolute;
-    top:-33px;
-    left:5px;
-}#input_sum_10{
-    display: none;
-    position: absolute;
-   top:-33px;
-    left:5px;
-}
-#input_sum_11{
-    display: none;
-    position: absolute;
-    top:-33px;
-    left:5px;
-}
-#input_sum_12{
-    display: none;
-    position: absolute;
-    top:-33px;
-    left:5px;
-}
-#input_sum_13{
-    display: none;
-    position: absolute;
-    top:-33px;
-    left:5px;
-}#input_sum_14{
-    display: none;
-    position: absolute;
-    top:-33px;
-    left:5px;
-}
-#input_sum_15{
-    display: none;
-    position: absolute;
-    top:-33px;
-    left:5px;
-}
-#input_sum_16{
-    display: none;
-    position: absolute;
-    top:-33px;
-    left:5px;
-}
-#input_sum_17{
-    display: none;
-    position: absolute;
-    top:-33px;
-    left:5px;
-}
+
 .number4{
     margin-left: 0px;
 }
@@ -360,10 +202,16 @@ img:hover{
 .players{
     width: 200px;
     text-align: center;
-    margin-left: 30px;
-    margin-top: 40px;
+    position: absolute;
+    left: 30px;
+    top: 150px;
 }
 .player{
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
     margin: 11.5px auto;
     font-size: 20px;
     color: black;
@@ -387,11 +235,16 @@ input{
     width: 150px;
 }
 h1{
-    font-size: 40px;
+    font-size: 40px;   
 }
 .modal_contents>p{
     font-size: 25px;
     letter-spacing: 2px;
+    position: absolute;
+    left: 150px;
+    top:80px;
+    
+    
 }
 #main_modal{
     height:100%;
@@ -426,19 +279,33 @@ h1{
     margin: 0;
 }
 
-.submit{
-     display:block;
-     width: 250px;
-     height:70px;
-     line-height: 70px;
-     color: #FFF;
-     text-decoration: none;
-     text-align: center;
-     background-color: #f39800; /*ボタン色*/
-     border-radius: 5px; /*角丸*/
-     -webkit-transition: all 0.5s;
-     transition: all 0.5s;
+#content{
+    padding-top:20px;
 }
-.submit:hover{
-     background-color: #f9c500; /*ボタン色*/
+.dice{
+    float: left;
+}
+.submit{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFF;
+  width: 100px;
+  height: 100px;
+  line-height: 92px;
+  border: double 4px #FFF;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  background-color:rgba(33, 39, 98, 0.5);
+  transition: .4s;
+  position: absolute;
+  right: 0px;
+  bottom: 5px;
+}
+
+.submit:hover {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
 }

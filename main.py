@@ -68,12 +68,11 @@ def main_page():
         user4 = User(name = request.form["name4"], money = 0)
         user5 = User(name = request.form["name5"], money = 0)
 
-        if user1.name == "" or user2.name == "":
-            return render_template("top.html")
-
-        for user in [user1, user2, user3, user4, user5]:
-            if user.name != "":
-                session.add(user)
+        session.add(user1)
+        session.add(user2)
+        session.add(user3)
+        session.add(user4)
+        session.add(user5)
 
         session.commit()
 
@@ -93,7 +92,7 @@ def bet_page(id, count):
         id_max = len(others)+1
         bets = [request.form.getlist("big"),
                 request.form.getlist("small"),
-                '''
+
                 request.form.getlist("sum_4"),
                 request.form.getlist("sum_5"),
                 request.form.getlist("sum_6"),
@@ -142,7 +141,7 @@ def bet_page(id, count):
                 request.form.getlist("triple_4"),
                 request.form.getlist("triple_5"),
                 request.form.getlist("triple_6"),
-                '''
+
                 ]
         i = 0
         for another in others:
@@ -150,7 +149,7 @@ def bet_page(id, count):
 
             big = BetTable(name=name, position="big", value=0, bet=d(bets[0][i]))
             small = BetTable(name=name, position="small", value=0, bet=d(bets[1][i]))
-            '''
+
             sum_4 = BetTable(name=name, position="sum", value=4, bet=d(bets[2][i]))
             sum_5 = BetTable(name=name, position="sum", value=5, bet=d(bets[3][i]))
             sum_6 = BetTable(name=name, position="sum", value=6, bet=d(bets[4][i]))
@@ -199,11 +198,11 @@ def bet_page(id, count):
             triple_4 = BetTable(name=name, position="triple", value=4, bet=d(bets[47][i]))
             triple_5 = BetTable(name=name, position="triple", value=5, bet=d(bets[48][i]))
             triple_6 = BetTable(name=name, position="triple", value=6, bet=d(bets[49][i]))
-            '''
+
 
             session.add(big)
             session.add(small)
-            '''
+
             session.add(sum_4)
             session.add(sum_5)
             session.add(sum_6)
@@ -252,7 +251,6 @@ def bet_page(id, count):
             session.add(triple_4)
             session.add(triple_5)
             session.add(triple_6)
-            '''
 
             session.commit()
             i += 1
@@ -281,12 +279,17 @@ def bet_page(id, count):
         session.query(Dice).delete()
         session.commit()
 
-        if id == id_max and count == 2:
-            return render_template("result.html", dealer=dealer, others=others)
+        if id == 5 and count == 2:
+            player = session.query(User).all()
+            return render_template("result.html", player=player)
         elif count == 2:
             return render_template("dice.html", dice=dice, dealer=dealer, others=others, id=id+1, count=1, result=result)
         else:
             return render_template("dice.html", dice=dice, dealer=dealer, others=others, id=id, count=count+1, result=result)
+
+    dealer = session.query(User).filter(User.id == 1).first()
+    others = session.query(User).filter(User.id != 1).all()
+    return render_template("bet.html", dealer=dealer, others=others, id=1, count=1)
 
 
 @app.route("/again/<int:id>/<int:count>", methods=["GET","POST"])
@@ -302,7 +305,7 @@ def next_game():
     session.commit()
     dealer = session.query(User).filter(User.id == 1).first()
     others = session.query(User).filter(User.id != 1).all()
-    return render_template("bet.html", dealer=dealer, others=others, id=1)
+    return render_template("bet.html", dealer=dealer, others=others, id=1, count=1)
 
 @app.route("/end", methods=["GET", "POST"])
 def end():
